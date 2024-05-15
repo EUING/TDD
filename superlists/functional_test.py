@@ -32,9 +32,9 @@ class NewVisitorTest(unittest.TestCase):
         # "1: 공작깃털 사기" 아이템이 추가된다
         inputbox.send_keys(Keys.ENTER)
 
-        table = self.browser.find_element_by_id("id_list_table")
+        table = self.browser.find_element(By.ID, "id_list_table")
         rows = table.find_elements(By.TAG_NAME, "tr")
-        self.assertTrue(any(row.text == "1: 공작깃털 사기" for row in rows))
+        self.assertTrue(any(row.text == "1: 공작깃털 사기" for row in rows), "신규 작업이 테이블에 표시되지 않는다")
 
         # 추가 아이템을 입력할 수 있는 여분의 텍스트 상자가 존재한다
         # 다시 "공작깃털을 이요해서 그물 만들기"라고 입력한다 (에디스는 매우 체계적인 사람이다)
