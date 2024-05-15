@@ -1,3 +1,5 @@
 
 superlists/db.sqlite3
 *.pyc
+superlists/lists/migrations/0002_item_text.py
+superlists/lists/migrations/0001_initial.py
